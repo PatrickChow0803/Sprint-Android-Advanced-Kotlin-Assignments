@@ -1,14 +1,20 @@
 # Sprint-Android-Advanced-Kotlin-Assignments
 
-## Build an app which implements Extension Functions using lambda for Notification Builder and write an extension function to load image using Glide.
+## Build an app which implements Extension Functions using lambda for Notification Builder and write an 
+extension function to load image using Glide.
 
 ## Instructions:
 
 # Part - 1 Notification Builder (Extension Function using Lambda)
-1. Follow the example for AlertDialog builder in the guided project and repeat that for the Notification Builder class.
+1. Follow the example for AlertDialog builder in the guided project and repeat that for the 
+Notification Builder class.
+
 2. Use NotificationCompat.Builder class to build the notification. 
+
 3. In the lambda for the Notification, pass in an id of 0 and an empty string for the channel Id.
+
 4. The text should be "This is my Notification."
+
 5. Set an icon and use colorPrimary when trying to get the color for the icon.
 
 # Part - 2 Glide Extension Function
