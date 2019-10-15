@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Extensions Project</string>
+    <string name="image_obtained_using_glide">Image obtained using Glide</string>
 </resources>
