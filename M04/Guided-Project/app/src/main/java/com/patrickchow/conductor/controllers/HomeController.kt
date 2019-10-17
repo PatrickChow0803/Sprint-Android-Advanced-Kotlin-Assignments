@@ -12,7 +12,7 @@ import com.bluelinelabs.conductor.changehandler.HorizontalChangeHandler
 import com.patrickchow.conductor.R
 import kotlinx.android.synthetic.main.home_controller_layout.view.*
 
-class HomeController :Controller(){
+class HomeController(private val message:String? = null) : BaseController(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
         val view = inflater.inflate(R.layout.home_controller_layout, container, false)
         view.tv_home_text_view.text = "Hello Conductor! ${router.backstackSize}"
@@ -28,7 +28,7 @@ class HomeController :Controller(){
 
         if(view != null){
             view?.findViewById<Button>(R.id.btn_next)?.setOnClickListener {
-                router.pushController(RouterTransaction.with(HomeController())
+                router.pushController(RouterTransaction.with(HomeController("New Home Controller ${router.backstackSize}"))
                     .pushChangeHandler(HorizontalChangeHandler())
                     .popChangeHandler(HorizontalChangeHandler()))
             }
