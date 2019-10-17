@@ -2,12 +2,11 @@ package com.patrickchow.conductor
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.view.ViewGroup
 import com.bluelinelabs.conductor.Conductor
 import com.bluelinelabs.conductor.Router
 import com.bluelinelabs.conductor.RouterTransaction
-import com.patrickchow.conductor.Controllers.HomeController
+import com.patrickchow.conductor.controllers.HomeController
 
 class MainActivity : AppCompatActivity() {
 
