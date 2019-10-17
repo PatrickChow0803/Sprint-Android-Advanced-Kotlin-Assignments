@@ -36,7 +36,7 @@ class HomeController(private val message:String? = null) : BaseController(){
             val previousButton = view?.btn_previous
             if(router.backstackSize <= 1){
                 previousButton?.visibility = View.GONE
-
+            }else{
                 previousButton?.setOnClickListener {
 
                     router.popCurrentController()
