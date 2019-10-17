@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.home_controller_layout.view.*
 class HomeController :Controller(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
         val view = inflater.inflate(R.layout.home_controller_layout, container, false)
-        view.tv_home_text_view.text = "Hello Conductor!"
+        view.tv_home_text_view.text = "Hello Conductor! ${router.backstackSize}"
 
         return view
     }
@@ -32,6 +32,17 @@ class HomeController :Controller(){
                     .pushChangeHandler(HorizontalChangeHandler())
                     .popChangeHandler(HorizontalChangeHandler()))
             }
+
+            val previousButton = view?.btn_previous
+            if(router.backstackSize <= 1){
+                previousButton?.visibility = View.GONE
+
+                previousButton?.setOnClickListener {
+
+                    router.popCurrentController()
+                }
+            }
+
         }
     }
 }
